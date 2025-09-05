@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ========================================
+       HEAD SECTION - Meta tags, links, title
+  ======================================== -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Beauty Store - Natural Beauty Products</title>
+  </head>
+
+  <body>
+    <!-- ========================================
+         HEADER & NAVIGATION SECTION
+    ======================================== -->
+    <header>
+      <!-- Logo -->
+      <a href="#" class="header-logo">
+        <img
+          class="logo"
+          src="./assets/final.logo.png"
+          alt="Beauty Store Logo"
+          width="50"
+          height="50"
+        />
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#Recommended">Recommended</a></li>
+          <li><a href="#Products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Hamburger Menu -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input
+          type="search"
+          placeholder="Search products..."
+          id="search-input"
+          class="search-input"
+        />
+        <button>
+          <img
+            class="search-icon"
+            id="search-icon"
+            src="./assets/search.png"
+            alt="Search"
+            width="15"
+            height="15"
+          />
+        </button>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Authentication Buttons -->
+        <div class="btns">
+          <button class="btn-signup">Sign Up</button>
+          <button class="btn-signin">Sign In</button>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div class="cart-container">
+          <img
+            class="cart-icon"
+            id="cart-icon"
+            src="./assets/shopping-cart.png"
+            alt="Shopping Cart"
+            width="20"
+            height="20"
+          />
+          <span class="cart-number">0</span>
+        </div>
+
+        <!-- Theme Toggle Switch -->
+        <div class="theme-toggle">
+          <input type="checkbox" id="theme-switch" class="theme-switch" />
+          <label for="theme-switch" class="theme-label">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+    <section class="hero-section">
+      <div class="text-section">
+        <h1>Welcome to the world of <span class="nature-span">nature</span></h1>
+        <p>
+          Let <span class="nature-span">nature</span> care for your skin, just
+          as it was meant to
+        </p>
+        <a href="#productRECO" style="text-decoration: none" class="explore-btn"
+          >Explore</a
+        >
+      </div>
+    </section>
+
+    <!-- ========================================
+         RECOMMENDED PRODUCTS SECTION
+    ======================================== -->
+    <div class="main-section" id="Recommended">
+      <div class="product-title">
+        <p>Highly Recommended</p>
+      </div>
+
+      <section class="recommended-products">
+        <div class="product-card">
+          <img src="./assets/Faoundition1.jpeg" alt="Foundation Product" />
+          <h3>Foundation</h3>
+          <p class="price">$29.99</p>
+          <p class="desc">
+            Smooth coverage with SPF, perfect for a natural everyday look
+          </p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="product-card" id="productRECO">
+          <img src="./assets/conselar.jpeg" alt="Concealer Product" />
+          <h3>Concealer</h3>
+          <p class="price">$19.99</p>
+          <p class="desc">
+            Lightweight base with SPF, smooth finish for daily glow
+          </p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+          <img src="./assets/heloronek.jpeg" alt="Hyaluronic Elixir Product" />
+          <h3>Hyaluronic Elixir</h3>
+          <p class="price">$39.99</p>
+          <p class="desc">
+            Deep hydration, plumps skin, perfect for morning boost
+          </p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+          <img src="./assets/serom.jpeg" alt="Vitamin C Serum Product" />
+          <h3>Vitamin C Serum</h3>
+          <p class="price">$24.99</p>
+          <p class="desc">
+            Brightens skin, fades spots, protects from sun damage
+          </p>
+          <button>Buy Now</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========================================
+         MAIN PRODUCTS SECTION
+    ======================================== -->
+    <div class="products-section" id="Products">
+      <div class="product-title">
+        <p>Our Products</p>
+      </div>
+      <!-- Products will be dynamically generated here -->
+      <div class="product-grid" id="product-grid"></div>
+    </div>
+
+    <!-- ========================================
+         ABOUT US SECTION
+    ======================================== -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>About Our Beauty Brand</h2>
+          <p>
+            We believe that true beauty comes from nature. Our carefully crafted
+            products harness the power of natural ingredients to enhance your
+            skin's natural radiance.
+          </p>
+
+          <!-- Features Grid -->
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">🌿</div>
+              <h3>Natural Ingredients</h3>
+              <p>100% organic and sustainably sourced</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">✨</div>
+              <h3>Proven Results</h3>
+              <p>Clinically tested for effectiveness</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">💚</div>
+              <h3>Eco-Friendly</h3>
+              <p>Cruelty-free and environmentally conscious</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🚚</div>
+              <h3>Free Shipping</h3>
+              <p>Fast and free delivery worldwide</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Image -->
+        <div class="about-image">
+          <img src="./assets/product-1.webp" alt="About Our Beauty Brand" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+    ======================================== -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h3>Address</h3>
+                <p>Beauty Street<br />Damascus, Shahbandar</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h3>Phone</h3>
+                <p>0953602163</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h3>Email</h3>
+                <p>anas.alholo.2005@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER SECTION
+    ======================================== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <h3>Beauty Store</h3>
+            <p>
+              Your trusted partner for natural beauty products that enhance your
+              skin's natural glow.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#Recommended">Recommended</a></li>
+              <li><a href="#Products">Products</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Care -->
+          <div class="footer-section">
+            <h3>Customer Care</h3>
+            <ul>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe for beauty tips and exclusive offers</p>
+            <div class="newsletter">
+              <input type="email" placeholder="Your email" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Beauty Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+         POPUP MODALS
+    ======================================== -->
+
+    <!-- Product Detail Popup -->
+    <div id="popup-overlay" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <div id="popup-details"></div>
+      </div>
+    </div>
+
+    <!-- Sign Up Popup -->
+    <div id="signup-overlay" class="signup-overlay">
+      <div class="signup-content">
+        <span class="signup-close">&times;</span>
+        <div class="signup-header">
+          <h2>Join Our Beauty Community</h2>
+          <p>Create your account to unlock exclusive offers</p>
+        </div>
+        <form class="signup-form">
+          <div class="input-group">
+            <input type="text" id="username" required />
+            <label for="username">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" required />
+            <label for="password">Password</label>
+          </div>
+          <button type="submit" class="signup-btn">Create Account</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <span class="cart-close">&times;</span>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <strong>Total: $<span id="cart-total">0.00</span></strong>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+    <script src="./main.js"></script>
+  </body>
+</html>
